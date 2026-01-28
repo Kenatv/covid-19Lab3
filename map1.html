@@ -2,11 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Covid-19 Count in US
-    </title>
+
+    <title>Covid-19 Count in US</title>
+    <subtitle>2020</subtitle>
+
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -24,6 +29,7 @@
 
 <body>
     <div id="map"></div>
+    <div id="legend"></div>
     <script>
         mapboxgl.accessToken =
             'pk.eyJ1Ijoia2VuYXR2IiwiYSI6ImNtaGF4b2YwOTA3MnkycW9hbHMzY3R0YjEifQ.Pnh4mKoZc4eEtnDHXxD7Dg';
@@ -67,16 +73,52 @@
                 },
                 'circle-stroke-color': 'white',
                 'circle-stroke-width': 0.5,
-                'circle-opacity': 1
+                'circle-opacity': 0.8
             }
             });
             map.on('click', 'covid-count', (event) => {
                 new mapboxgl.Popup()
                     .setLngLat(event.features[0].geometry.coordinates)
-                    .setHTML(`<strong>Cases:</strong> ${event.features[0].properties.cases}`)
+                    .setHTML(
+                        `<strong>State:</strong> ${event.features[0].properties.state}<br>
+                        <strong>County:</strong> ${event.features[0].properties.county}<br>
+                        <strong>Cases:</strong> ${event.features[0].properties.cases}<br>
+                        <strong>Deaths:</strong> ${event.features[0].properties.deaths}`)
                     .addTo(map);
             })
         });
+    // create legend object, it will anchor to the div element with the id legend.
+        const legend = document.getElementById('legend');
+
+        //set up legend grades and labels
+        var labels = ['<strong>Size</strong>'], vbreak;
+        //iterate through grades and create a scaled circle and label for each
+        for (var i = 0; i < grades.length; i++) {
+            vbreak = grades[i];
+            // you need to manually adjust the radius of each dot on the legend 
+            // in order to make sure the legend can be properly referred to the dot on the map.
+            dot_radius = 1.5 * radii[i];
+            let labelText;
+            if (i === 0) {
+                labelText =  '≥' + vbreak;  
+            } else {
+                labelText = '≥' + vbreak;  
+            }
+            labels.push(
+                '<p class="break"><i class="dot" style="background:' + colors[i] + '; width: ' + dot_radius +
+                'px; height: ' +
+                dot_radius + 'px; "></i> <span class="dot-label" style="top: ' + dot_radius / 2 + 'px;">' + labelText +
+                '</span></p>');
+
+        }
+
+        const source =
+            '<p style="text-align: right; font-size:10pt">Source: <a href="https://data.census.gov/table/ACSDP5Y2018.DP05?g=0100000US$050000&d=ACS+5-Year+Estimates+Data+Profiles&hidePreview=true">US ACS</a></p>';
+
+        // combine all the html codes.
+        legend.innerHTML = labels.join('') + source;
+
+
 
     </script>
 

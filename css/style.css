@@ -27,9 +27,10 @@ body {
 
 /* each line for a break */
 .break {
-    position: relative;
+    display: flex;
     margin: 0px;
     padding: 0px;
+    align-items: center;
 }
 
 /* basic style for a dot/circle */
@@ -37,15 +38,14 @@ body {
     display: inline-block;
     margin-top: 5px;
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 /* the label for the dot */
 .dot-label {
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: 8px;    
     font-style: italic;
+    align-items: center;
 }
 
 /* the text color of a hyper link */
