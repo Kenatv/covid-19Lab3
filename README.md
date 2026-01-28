@@ -16,9 +16,7 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
   👉 *[Proportional Symbol Map](https://kenatv.github.io/covid-19Lab3/map2.html)*
 
 - **Choropleth Map (Rates)**  
-  👉 *[Link to choropleth map]*
-
-*[Choropleth Map](https://kenatv.github.io/covid-19Lab3/map1.html)*
+  👉  *[Choropleth Map](https://kenatv.github.io/covid-19Lab3/map1.html)*
 
 ---
 
@@ -28,8 +26,6 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ### Choropleth Map
 ![Choropleth Map Screenshot](img/choroplethmap.png)
-
-*(Screenshots should be placed in a `/screenshots` folder)*
 
 ---
 
@@ -44,12 +40,7 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ### Functions Beyond Lecture Content
 - **Asynchronous data loading** using `fetch()` with `async/await`
-- **Dynamic legend creation** using JavaScript DOM manipulation
 - **Mapbox expression-based styling** using `step` expressions
-- **Feature querying** with `queryRenderedFeatures()` for hover interaction
-- **Data normalization** (rates per population instead of raw counts)
-
-These functions extend beyond basic Mapbox usage and demonstrate more advanced JavaScript control over map behavior and UI elements.
 
 ---
 
