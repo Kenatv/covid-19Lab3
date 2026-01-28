@@ -1,13 +1,16 @@
+html, body {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
 }
 
-#map {
+#features {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
 }
 
 /* the layout of the legend panel */
@@ -23,6 +26,13 @@ body {
     border-radius: 3px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+}
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index:0;
 }
 
 /* each line for a break */
@@ -87,4 +97,12 @@ a {
     padding: 6px 12px;
     border-radius: 4px;
     z-index: 1;
+}
+.legend-key {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border: 1px solid #999;
+    align-items: left;
 }
