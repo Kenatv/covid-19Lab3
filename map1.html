@@ -4,7 +4,6 @@
     <meta charset="utf-8">
 
     <title>Covid-19 Count in US</title>
-    <subtitle>2020</subtitle>
 
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -28,6 +27,18 @@
 </head>
 
 <body>
+    <div id="title">
+        US Covid-19 Count
+    </div>
+    <div id="subtitle">
+        Covid 2020 
+    </div>
+    <div id="description">
+        County-level COVID-19 cases<br>
+         in the United States (2020).<br>
+        By Ken Thuleeratanarom
+    </div>
+    
     <div id="map"></div>
     <div id="legend"></div>
     <script>
@@ -38,7 +49,8 @@
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: [-95, 38], // starting position [lng, lat]
-            zoom: 3.7 // starting zoom
+            zoom: 3.7, // starting zoom
+            projection: 'albers'
         });
         const grades = [1000, 10000, 50000];
         const colors = ['#fc9272', '#fcae91', '#fb6a4a'];
@@ -100,9 +112,9 @@
             dot_radius = 1.5 * radii[i];
             let labelText;
             if (i === 0) {
-                labelText =  '≥' + vbreak;  
+                labelText = '> 0';
             } else {
-                labelText = '≥' + vbreak;  
+                labelText = '≥ ' + vbreak;
             }
             labels.push(
                 '<p class="break"><i class="dot" style="background:' + colors[i] + '; width: ' + dot_radius +

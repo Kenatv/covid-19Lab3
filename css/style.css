@@ -55,23 +55,36 @@ a {
 
 #title {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 20px;
-    margin-left: 20px;
+    top: 15px;
+    left: 15px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 25pt;
-    color: white
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 4px;
+    z-index: 1;
 }
-
 
 #subtitle {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 70px;
-    margin-left: 190px;
+    top: 55px;
+    left: 15px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
-    color: white
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 4px;
+    z-index: 1;
+}
+#description {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 4px;
+    z-index: 1;
 }
