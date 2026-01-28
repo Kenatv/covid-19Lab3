@@ -1,17 +1,17 @@
 # COVID-19 in the United States (2020)  
-### Proportional Symbol Map & Choropleth Map
+### Proportional Symbol Map & Choropleth Map Detailing Covid-19 in the US
 
-## 📌 Project Overview
-This project visualizes county-level COVID-19 data across the United States for the year 2020 using two complementary map types:
+## Project Overview
+This project visualizes county-level COVID-19 data across the United States for the year 2020 using two map types:
 
 1. **Proportional Symbol Map** showing total COVID-19 case counts by county  
 2. **Choropleth Map** showing COVID-19 case rates normalized by population  
 
-The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS.
+Each of these have thier own use and functions for further analysis regarding Covid-19 in the year 2020
 
 ---
 
-## 🗺️ Interactive Maps
+## Link to the Maps
 - **Proportional Symbol Map (Counts)**  
   👉 *[Proportional Symbol Map](https://kenatv.github.io/covid-19Lab3/map2.html)*
 
@@ -20,7 +20,7 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ---
 
-## 🖼️ Screenshots
+## Maps
 ### Proportional Symbol Map
 ![Proportional Symbol Map Screenshot](img/proportion.png)
 
@@ -29,7 +29,7 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ---
 
-## ⚙️ Primary Functions & Features
+## Primary Functions & Features
 
 ### Core Features
 - Proportional circle symbols scaled by COVID-19 case counts
@@ -44,7 +44,7 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ---
 
-## 📚 Libraries & Technologies Used
+## Libraries in use
 - **Mapbox GL JS**
 - **HTML**
 - **CSS**
@@ -53,19 +53,23 @@ The project was created using **Mapbox GL JS**, custom JavaScript, HTML, and CSS
 
 ---
 
-## 🧾 Data Sources
+## Data Sources
 - COVID-19 county-level case and death data (2020)
 - U.S. Census population data (2018 estimates)
 
-Example attributes include:
-- `cases`
-- `deaths`
-- `rates` (cases per population)
+---
 
-*(Data preprocessed into GeoJSON format for web mapping)*
+## Acknowledgement
+
+- U.S. Census Bureau
+- COVID-19 open data providers
+- MapBox
+- MapShaper
+- Github
 
 ---
 
-## 👤 Author
+## Author
 **Ken Thuleeratanarom**  
 Geography 458 Project Lab 3
+
